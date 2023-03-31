@@ -4,15 +4,25 @@
 }
 
 :root {
-  --azul-escuro: #154580;
-  --azul-claro: #e5f1ff;
-  --azul: #2196f3;
-  --laranja: #ff9800;
-  --amarelo-escuro: #bfb304;
-  --cinza: #a6a6a6;
-  --preto: #0d0d0d;
+  --vermelho-50: #f9dbdf;
+  --vermelho-100: #ec939e;
+  --vermelho-300: #df4a5e;
+  --vermelho-500: #b52033;
+  --vermelho-700: #6c131f;
+  --vermelho-900: #24060a;
+  --verde-50: #d6fef3;
+  --verde-100: #83fcdc;
+  --verde-300: #30f9c5;
+  --verde-500: #06cf9b;
+  --verde-700: #037c5d;
+  --verde-900: #01291f;
+  --preto-50: #eaeaea;
+  --preto-100: #bfbfbf;
+  --preto-300: #959595;
+  --preto-500: #6a6a6a;
+  --preto-700: #404040;
+  --preto-900: #151515;
 }
-
 body {
   position: relative;
   width: 100%;
@@ -27,7 +37,7 @@ body {
 /* Cabeçalho */
 .navegacao-top {
   font-family: "Alkatra", cursive;
-  background-color: var(--azul-escuro);
+  background-color: var(--vermelho-500);
   height: 100px;
   width: 100%;
   display: flex;
@@ -35,14 +45,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px black;
 }
 
 .navegacao-top a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  color: white;
+  color: var(--vermelho-50);
   font-size: 1.25rem;
 }
 
@@ -67,31 +76,29 @@ body {
 }
 
 .icone-itens-cab a {
-  border: 2px solid var(--azul-escuro);
-  background-color: var(--azul-escuro);
-  border-radius: 20px;
   padding: 5px 10px;
-  color: var(--laranja);
-  transition: 1s all;
+  color: var(--vermelho-50);
 }
 
 .icone-itens-cab a:hover {
   cursor: pointer;
-  background: white;
+  background: var(--vermelho-700);
   color: var(--preto);
-  border-color: var(--laranja);
+  border-radius: 6px;
+  padding: 10px 20px;
 }
 
 .pesquisar-input {
   width: 100%;
   max-width: 380px;
   height: 45px;
-  border: 2px solid var(--laranja);
-  background-color: white;
+  color: var(--vermelho-900);
+  background-color: var(--vermelho-50);
   padding: 10px 20px 7px;
-  border-radius: 20px;
+  border-radius: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  outline: none;
 }
 
 .pesquisa-itens-cab {
@@ -174,16 +181,20 @@ body {
 }
 
 /* Parte Principal */
-
-main .parte-principal {
-  background-image: url(../img/fotor_2023-3-31_3_27_6.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 20px;
+.container-principal {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
+  padding: 30px auto;
+}
+.parte-principal {
+}
+
+.parte-principal::before {
+  content: "";
+  display: block;
+  background: ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
 }
