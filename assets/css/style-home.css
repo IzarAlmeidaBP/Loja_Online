@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+:root {
   --azul-escuro: #154580;
   --azul-claro: #e5f1ff;
   --azul: #2196f3;
@@ -9,6 +12,7 @@
   --cinza: #a6a6a6;
   --preto: #0d0d0d;
 }
+
 body {
   position: relative;
   width: 100%;
@@ -18,8 +22,8 @@ body {
   color: white;
   box-sizing: border-box;
   text-align: center;
-  background-color: var(--azul);
 }
+
 /* Cabeçalho */
 .navegacao-top {
   font-family: "Alkatra", cursive;
@@ -33,23 +37,7 @@ body {
   padding: 10px 20px;
   box-shadow: 0 2px 4px black;
 }
-.titulo {
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-.titulo a:hover {
-  cursor: pointer;
-  font-size: 1.6rem;
-  transform: scaleX(1.2);
-  transition: 0.5s all;
-}
-.icone-itens-cab a:hover {
-  cursor: pointer;
-  transition: 1s all;
-  background: white;
-  color: var(--preto);
-  border-color: var(--laranja);
-}
+
 .navegacao-top a {
   text-decoration: none;
   text-transform: uppercase;
@@ -57,6 +45,43 @@ body {
   color: white;
   font-size: 1.25rem;
 }
+
+.titulo {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.titulo a:hover {
+  cursor: pointer;
+  font-size: 1.6rem;
+  transform: scaleX(1.2);
+  transition: 0.5s all;
+}
+
+.icone-itens-cab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.icone-itens-cab a {
+  border: 2px solid var(--azul-escuro);
+  background-color: var(--azul-escuro);
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: var(--laranja);
+  transition: 1s all;
+}
+
+.icone-itens-cab a:hover {
+  cursor: pointer;
+  background: white;
+  color: var(--preto);
+  border-color: var(--laranja);
+}
+
 .pesquisar-input {
   width: 100%;
   max-width: 380px;
@@ -68,44 +93,37 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .pesquisa-itens-cab {
   display: none;
 }
+
 @media (min-width: 768px) {
   .navegacao-top {
     padding: 20px 40px;
   }
+
   .icone-itens-cab {
     gap: 20px;
   }
+
   .pesquisar-input {
     margin-top: 0;
     margin-bottom: 0;
     width: 500px;
   }
 }
+
 @media (min-width: 1000px) {
   .pesquisa-itens-cab {
     display: block;
   }
 }
-.icone-itens-cab {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-.icone-itens-cab a {
-  border: 2px solid var(--azul-escuro);
-  background-color: var(--azul-escuro);
-  border-radius: 20px;
-  padding: 5px 10px;
-  color: var(--laranja);
-}
+
 /* Aba de navegação */
 
 .secao-superior-rolagem {
+  font-family: "Alkatra", cursive;
   height: 55px;
   display: flex;
   flex-direction: row;
@@ -113,12 +131,12 @@ body {
   align-items: center;
   background-color: var(--azul-claro);
   padding: 0 20px;
-  position: fixed;
+  position: relative;
   right: 0;
   left: 0;
   gap: 25px;
-  box-shadow: 0 2px 4px black;
-  margin-top:2px;
+  box-shadow: 0 2px 4px var(--laranja);
+  margin-top: 2px;
 }
 
 .item-rolagem {
@@ -133,7 +151,7 @@ body {
 
 .item-rolagem:hover {
   transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--laranja);
 }
 
 .item-rolagem a {
@@ -153,4 +171,19 @@ body {
   .item-rolagem {
     margin: 5px 0;
   }
+}
+
+/* Parte Principal */
+
+main .parte-principal {
+  background-image: url(../img/fotor_2023-3-31_3_27_6.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
 }
